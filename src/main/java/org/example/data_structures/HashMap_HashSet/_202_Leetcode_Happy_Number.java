@@ -34,7 +34,7 @@ public class _202_Leetcode_Happy_Number {
 //        }
 //        return true;
 
-//          
+//
         HashSet hs = new HashSet();
 
         while (n != 1 && !hs.contains(n)){
