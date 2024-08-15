@@ -57,25 +57,35 @@ public class _242_Leetcode_Valid_Anagram {
 //
 //      Solution 3
 
-    public boolean isAnagram(String s, String t) {
+//    public boolean isAnagram(String s, String t) {
+//
+//        int[] arr = new int[26];
+//
+//        for(char c : s.toCharArray()) {
+//            arr[c-97]++;
+//        }
+//
+//        for(char c : t.toCharArray()) {
+//            arr[c-97]--;
+//        }
+//
+//        for(int i = 0; i < arr.length; i++) {
+//            if(arr[i] != 0) {
+//                return false;
+//            }
+//        }
+//
+//        return true;
 
-        int[] arr = new int[26];
-
-        for(char c : s.toCharArray()) {
-            arr[c-97]++;
-        }
-
-        for(char c : t.toCharArray()) {
-            arr[c-97]--;
-        }
-
-        for(int i = 0; i < arr.length; i++) {
-            if(arr[i] != 0) {
-                return false;
-            }
-        }
-
-        return true;
+//  Solution 4
+    public boolean isAnagram(String s, String t){
+        char[] charS = s.toCharArray();
+        Arrays.sort(charS);
+        char[] charT = t.toCharArray();
+        Arrays.sort(charT);
+        System.out.println(charS);
+        System.out.println(charT);
+        return charT == charS;
     }
 
 }
