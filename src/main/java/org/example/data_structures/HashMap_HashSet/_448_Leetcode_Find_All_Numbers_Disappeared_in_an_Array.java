@@ -20,16 +20,16 @@ import java.util.List;
  */
 public class _448_Leetcode_Find_All_Numbers_Disappeared_in_an_Array {
     public List<Integer> findDisappearedNumbers(int[] nums) {
-//        ArrayList<Integer> result = new ArrayList<>();
-//        HashSet<Integer> set = new HashSet();
-//        for(int i : nums){
-//            set.add(i);
-//        }
-//        for(int i = 1; i <= nums.length; i++){
-//            if(!set.contains(i))
-//                result.add(i);
-//        }
-//        return result;
+        ArrayList<Integer> result = new ArrayList<>();
+        HashSet<Integer> set = new HashSet();
+        for(int i : nums){
+            set.add(i);
+        }
+        for(int i = 1; i <= nums.length; i++){
+            if(!set.contains(i))
+                result.add(i);
+        }
+        return result;
 
         // Solution 2
 
