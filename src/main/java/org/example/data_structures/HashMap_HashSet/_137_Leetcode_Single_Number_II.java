@@ -31,6 +31,21 @@ public class _137_Leetcode_Single_Number_II {
 //        }
 //        return 0;
 
-
+        // Two pointer engineering
+        Arrays.sort(nums);
+        int f = 0;
+        boolean isSingle = true;
+        for(int i = 0; i < nums.length; i++){
+            f = i + 2;
+            if(f > nums.length - 1){
+                return nums[nums.length - 1];
+            }
+            if(nums[i] == nums[f]){
+                i = f;
+                continue;
+            }
+            return nums[i];
+        }
+        return 0;
     }
 }
