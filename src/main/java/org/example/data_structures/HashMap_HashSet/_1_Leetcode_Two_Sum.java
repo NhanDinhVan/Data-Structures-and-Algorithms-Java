@@ -29,6 +29,7 @@ public class _1_Leetcode_Two_Sum {
 //                return new int[] {i , map.get(target - nums[i])};
 //        }
 //        return new int[] {0, 0};
+
 //      Solution: Brute Force
 
         for(int i = 0; i < nums.length; i++){
