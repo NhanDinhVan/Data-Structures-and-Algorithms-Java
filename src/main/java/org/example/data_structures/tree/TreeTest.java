@@ -16,9 +16,17 @@ package org.example.data_structures.tree;
  */
 public class TreeTest {
     public static void main(String[] args) {
-        MyBinaryTree myBinaryTree = new MyBinaryTree();
-        myBinaryTree.init();
 
-        System.out.println("Done");
+        MyBinarySearchTree MyBTS = new MyBinarySearchTree();
+        MyBTS.root = MyBTS.insert(MyBTS.root,5);
+        System.out.println("Inserting: 5");
+        System.out.println("Root after inserting 5: " + MyBTS.root);
+        MyBTS.root = MyBTS.insert(MyBTS.root,7);
+        MyBTS.root = MyBTS.insert(MyBTS.root,6);
+        MyBTS.root = MyBTS.insert(MyBTS.root,4);
+        MyBTS.root = MyBTS.insert(MyBTS.root,3);
+
+        System.out.println(MyBTS.root.toString()+"hi");
+        System.out.println("hi");
     }
 }
