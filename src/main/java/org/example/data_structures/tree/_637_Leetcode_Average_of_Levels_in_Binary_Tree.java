@@ -21,12 +21,15 @@ import java.util.Queue;
  */
 public class _637_Leetcode_Average_of_Levels_in_Binary_Tree {
     public List<Double> averageOfLevels(TreeNode root) {
+        List<Double> result = new ArrayList<>();
+        if (root == null) {
+            return result;
+        }
         Queue<TreeNode> q = new LinkedList<>();
         q.add(root);
-        List<Double> result = new ArrayList<>();
         while(!q.isEmpty()){
             int size = q.size();
-            Double sum = 0.0;
+            double sum = 0.0;
             for(int i = 0; i < size; i++){
                 TreeNode tmp = q.poll();
                 if(tmp.left != null) {
