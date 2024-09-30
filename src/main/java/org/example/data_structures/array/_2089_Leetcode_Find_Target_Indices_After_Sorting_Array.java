@@ -20,11 +20,24 @@ import java.util.List;
  */
 public class _2089_Leetcode_Find_Target_Indices_After_Sorting_Array {
     public List<Integer> targetIndices(int[] nums, int target) {
-        Arrays.sort(nums);
+//        Arrays.sort(nums);
+//        List<Integer> result = new ArrayList<>();
+//        for(int i = 0; i < nums.length; i++){
+//            if(nums[i] == target)
+//                result.add(nums[i]);
+//        }
+//        return result;
+        int sameNuberCount = 0;
+        int lessNumberCount = 0;
         List<Integer> result = new ArrayList<>();
         for(int i = 0; i < nums.length; i++){
             if(nums[i] == target)
-                result.add(nums[i]);
+                sameNuberCount++;
+            if(nums[i] < target)
+                lessNumberCount++;
+        }
+        for(int i = 0; i <sameNuberCount; i++){
+            result.add(lessNumberCount+i);
         }
         return result;
     }
