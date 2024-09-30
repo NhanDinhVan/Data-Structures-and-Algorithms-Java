@@ -1,6 +1,7 @@
 package org.example.data_structures.String;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -19,22 +20,31 @@ import java.util.List;
  */
 public class _14_Leetcode_Longest_Common_Prefix {
     public String longestCommonPrefix(String[] strs) {
+//        StringBuilder result = new StringBuilder();
+//        for(int i = 0 ; i < strs[0].length(); i++){
+//            boolean check = true;
+//            for(int j = 0 ; j < strs.length; j++){
+//                if(i >= strs[j].length()){
+//                    check = false;
+//                    break;
+//                }
+//                if(strs[j].charAt(i) != strs[0].charAt(i))
+//                    check = false;
+//            }
+//            if(check){
+//                result.append(strs[0].charAt(i));
+//            }else{
+//                return result.toString();
+//            }
+//        }
+//        return result.toString();
+
         StringBuilder result = new StringBuilder();
+        Arrays.sort(strs);
         for(int i = 0 ; i < strs[0].length(); i++){
-            boolean check = true;
-            for(int j = 0 ; j < strs.length; j++){
-                if(i >= strs[j].length()){
-                    check = false;
-                    break;
-                }
-                if(strs[j].charAt(i) != strs[0].charAt(i))
-                    check = false;
-            }
-            if(check){
-                result.append(strs[0].charAt(i));
-            }else{
-                return result.toString();
-            }
+            if(strs[0].charAt(i) != strs[strs.length - 1].charAt(i))
+                break;
+            result.append(strs[0].charAt(i));
         }
         return result.toString();
     }
