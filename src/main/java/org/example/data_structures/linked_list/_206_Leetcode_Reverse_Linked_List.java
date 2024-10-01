@@ -18,16 +18,25 @@ import java.util.Stack;
  */
 public class _206_Leetcode_Reverse_Linked_List {
     public ListNode reverseList(ListNode head) {
+//        ListNode cur = head;
+//        Stack<Integer> s = new Stack<>();
+//        while(cur != null){
+//            s.push(cur.val);
+//            cur = cur.next;
+//        }
+//        cur = head;
+//        while(cur != null){
+//            cur.val = s.pop();
+//            cur = cur.next;
+//        }
+//        return head;
+
         ListNode cur = head;
-        Stack<Integer> s = new Stack<>();
-        while(cur != null){
-            s.push(cur.val);
-            cur = cur.next;
-        }
-        cur = head;
-        while(cur != null){
-            cur.val = s.pop();
-            cur = cur.next;
+        while(cur != null && cur.next != null){
+            ListNode next = cur.next;
+            cur.next = next.next;
+            next.next = head;
+            head = next;
         }
         return head;
     }
