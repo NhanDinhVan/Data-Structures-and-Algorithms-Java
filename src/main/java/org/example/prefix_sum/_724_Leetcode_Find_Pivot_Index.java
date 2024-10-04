@@ -16,24 +16,42 @@ package org.example.prefix_sum;
  */
 public class _724_Leetcode_Find_Pivot_Index {
     public int pivotIndex(int[] nums) {
-        int l = 0;
-        int r = nums.length - 1;
-        int suml = nums[l], sumr = nums[r];
-        while(l != r){
-            if(suml > sumr){
-                r--;
-                sumr += nums[r];
-            }else if(suml < sumr){
-                l++;
-                suml += nums[l];
-            }else{
-                l++;
-                r--;
-                if(r==l){
-                    return l;
-                }
-            }
+//        int l = 0;
+//        int r = nums.length - 1;
+//        int suml = nums[l], sumr = nums[r];
+//        while(l != r){
+//            if(suml > sumr){
+//                r--;
+//                sumr += nums[r];
+//            }else if(suml < sumr){
+//                l++;
+//                suml += nums[l];
+//            }else{
+//                l++;
+//                r--;
+//                if(r==l){
+//                    return l;
+//                }
+//            }
+//        }
+//        return l;
+        int totalSum = 0;
+        int leftSum = 0;
+
+        for (int num : nums) {
+            totalSum += num;
         }
-        return l;
+
+        for (int i = 0; i < nums.length; i++) {
+            totalSum -= nums[i];
+
+            if (leftSum == totalSum) {
+                return i;
+            }
+
+            leftSum += nums[i];
+        }
+
+        return -1;
     }
 }
