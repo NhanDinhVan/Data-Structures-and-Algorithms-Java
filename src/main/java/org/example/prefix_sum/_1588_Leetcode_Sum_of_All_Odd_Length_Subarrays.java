@@ -19,22 +19,28 @@ import java.util.HashMap;
 public class _1588_Leetcode_Sum_of_All_Odd_Length_Subarrays {
     public int sumOddLengthSubarrays(int[] arr) {
         HashMap<Integer, Integer> hmap = new HashMap<>();
-        int sum = 0;
+        int totalSum = 0;
+        int currentSum = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            currentSum += arr[i];
+            hmap.put(i, currentSum);
+            totalSum += arr[i];
+        }
+
         int l = 0, r = 2;
-
-        for(int i = 0; i < arr.length; i++){
-            hmap.put(i, sum);
-            sum+=arr[i];
-        }
-
-        while(r < arr.length){
+        while (r < arr.length) {
             l = 0;
-            System.out.println(sum);
-            for(int i = r; i < arr.length; i++, l++){
-                sum+=(hmap.get(i)-hmap.get(l));
+            for (int i = r; i < arr.length; i++, l++) {
+                if (l == 0) {
+                    totalSum += hmap.get(i);
+                } else {
+                    totalSum += hmap.get(i) - hmap.get(l - 1);
+                }
             }
-            r+=2;
+            r += 2;
         }
-        return sum;
+
+        return totalSum;
     }
 }
