@@ -36,11 +36,10 @@ public class _5_Leetcode_Longest_Palindromic_Substring {
         if(l == r)
             return true;
         while(l < r){
-            if(s.charAt(l) == s.charAt(r)){
-                l++; r--;
-            }else{
+            if(s.charAt(l) != s.charAt(r)){
                 return false;
             }
+            l++; r--;
         }
         return true;
     }
