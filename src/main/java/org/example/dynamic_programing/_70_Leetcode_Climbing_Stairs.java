@@ -23,8 +23,8 @@ public class _70_Leetcode_Climbing_Stairs {
     public int climbStairs(int n) {
         return helper(n);
     }
-    public int helper(int n){
-        if(hmap.containsKey(n))
+    public int helper(int n) {
+        if (hmap.containsKey(n))
             return hmap.get(n);
 
         if (n == 0) return 1;
@@ -35,4 +35,5 @@ public class _70_Leetcode_Climbing_Stairs {
 
         hmap.put(n, r1 + r2);
         return r1 + r2;
+    }
 }
