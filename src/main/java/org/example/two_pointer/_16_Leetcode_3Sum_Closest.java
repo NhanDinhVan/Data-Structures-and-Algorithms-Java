@@ -2,6 +2,7 @@ package org.example.two_pointer;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * _16_Leetcoed_3Sum_Closest
@@ -20,20 +21,37 @@ import java.util.HashMap;
 
 public class _16_Leetcode_3Sum_Closest {
     public int threeSumClosest(int[] nums, int target) {
+//        int closestSum = Integer.MAX_VALUE;
+//
+//        for(int i = 0; i < nums.length - 2; i++){
+//            for(int j = i + 1; j < nums.length - 1; j++){
+//                for(int k = j + 1; k < nums.length; k++){
+//                    int curSum = nums[i] + nums[j] + nums[k];
+//                    if(curSum - target == 0)
+//                        return curSum;
+//                    if(Math.abs(curSum - target) < Math.abs(closestSum - target))
+//                        closestSum = curSum;
+//                }
+//            }
+//
+//        return closestSum;
+        Arrays.sort(nums);
         int closestSum = Integer.MAX_VALUE;
+        for (int i = 0; i < nums.length - 2; i++) {
+            int l = i + 1, r = nums.length - 1;
 
-        for(int i = 0; i < nums.length - 2; i++){
-            for(int j = i + 1; j < nums.length - 1; j++){
-                for(int k = j + 1; k < nums.length; k++){
-                    int curSum = nums[i] + nums[j] + nums[k];
-                    if(curSum - target == 0)
-                        return curSum;
-                    if(Math.abs(curSum - target) < Math.abs(closestSum - target))
-                        closestSum = curSum;
-                }
+            while (l < r) {
+                int curSum = nums[i] + nums[l] + nums[r];
+                if (Math.abs(curSum - target) < Math.abs(closestSum - target))
+                    closestSum = curSum;
+                if (curSum < target)
+                    l++;
+                else if (curSum > target)
+                    r--;
+                else
+                    return curSum;
             }
         }
-
         return closestSum;
     }
 }
