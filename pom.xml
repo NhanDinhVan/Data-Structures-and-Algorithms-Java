@@ -8,6 +8,15 @@
     <artifactId>DataStructures-Algorithms</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-base</artifactId>
+            <version>21.0.3</version> <!-- Bạn có thể sử dụng phiên bản mới nhất -->
+        </dependency>
+
+    </dependencies>
+
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
