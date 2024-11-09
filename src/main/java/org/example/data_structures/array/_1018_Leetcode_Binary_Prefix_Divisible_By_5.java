@@ -26,7 +26,7 @@ public class _1018_Leetcode_Binary_Prefix_Divisible_By_5 {
         int curNum = 0;
         for(int i = 0; i < nums.length; i++){
             curNum = curNum*2 + nums[i];
-            if(curNum % 5 == 0){
+            if(curNum == 0){
                 ans.add(true);
             }else{
                 ans.add(false);
