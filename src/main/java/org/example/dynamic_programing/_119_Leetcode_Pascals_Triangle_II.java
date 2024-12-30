@@ -35,6 +35,6 @@ public class _119_Leetcode_Pascals_Triangle_II {
             nextRow.add(1);
             ans = nextRow;
         }
-       return ans;
+        return ans;
     }
 }
