@@ -19,7 +19,7 @@ public class _2381_Leetcode_Shifting_Letters_II {
     public String shiftingLetters(String s, int[][] shifts) {
         int n = s.length();
         int[] A = new int[n];
-        for (int[] it : Q) {
+        for (int[] it : shifts) {
             int l = it[0];
             int r = it[1];
             int t = it[2];
