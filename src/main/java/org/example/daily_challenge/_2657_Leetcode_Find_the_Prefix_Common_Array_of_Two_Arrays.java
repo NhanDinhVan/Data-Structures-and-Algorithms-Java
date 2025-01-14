@@ -21,20 +21,43 @@ import java.util.Set;
 
 public class _2657_Leetcode_Find_the_Prefix_Common_Array_of_Two_Arrays {
     public int[] findThePrefixCommonArray(int[] A, int[] B) {
-        int n = A.length;
-        int[] C = new int[n];
-        int prefix;
-        Set<Integer> set = new HashSet<>();
+//        int n = A.length;
+//        int[] C = new int[n];
+//        int prefix;
+//        Set<Integer> set = new HashSet<>();
+//
+//        for(int i = 0; i < n; i++){
+//            prefix = 0;
+//            set.add(A[i]);
+//            for(int b = 0; b <= i; b++){
+//                if(set.contains(B[b])) prefix++;
+//            }
+//            C[i] = prefix;
+//        }
+//        return C;
 
-        for(int i = 0; i < n; i++){
-            prefix = 0;
-            set.add(A[i]);
-            for(int b = 0; b <= i; b++){
-                if(set.contains(B[b])) prefix++;
+        Set<Integer> s = new HashSet<>();
+        Set<Integer> sb = new HashSet<>();
+        int n = A.length;
+        int cnt = 0;
+        int[] ans = new int[n];
+        for(int i = 0; i<n; i++){
+            if(!s.contains(A[i])){
+                s.add(A[i]);
+                if(sb.contains(A[i]))
+                    cnt++;
             }
-            C[i] = prefix;
+
+            if(!sb.contains(B[i])){
+                sb.add(B[i]);
+                if(s.contains(B[i]))
+                    cnt++;
+
+            }
+            ans[i]=cnt;
+
         }
-        return C;
+        return ans;
     }
 
 }
