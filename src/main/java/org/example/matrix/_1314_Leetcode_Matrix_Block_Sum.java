@@ -36,8 +36,4 @@ public class _1314_Leetcode_Matrix_Block_Sum {
         }
         return results;
     }
-
-    public static void main(String[] args) {
-        int[][] test = new int[][]
-    }
 }
