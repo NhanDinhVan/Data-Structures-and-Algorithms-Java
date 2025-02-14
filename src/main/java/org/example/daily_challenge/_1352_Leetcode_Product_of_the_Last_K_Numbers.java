@@ -1,5 +1,7 @@
 package org.example.daily_challenge;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 /**
