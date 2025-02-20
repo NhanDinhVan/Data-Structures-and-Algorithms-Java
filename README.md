@@ -1,2 +1,2 @@
-# DataStructures-Algorithm-Javas
+# DataStructures-Algorithm-Java
 # Data-Structures-and-Algorithms
