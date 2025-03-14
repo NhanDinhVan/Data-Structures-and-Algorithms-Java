@@ -20,7 +20,7 @@ public class _2226_Leetcode_Maximum_Candies_Allocated_to_K_Children {
         if(k == 0) return 0;
         int result = 0;
         int low = 1;
-        int high = Integer.MAX_VALUE;
+        int high = Integer.MIN_VALUE;
 
         for(int i : candies) high = Math.max(high, i);
 
@@ -37,9 +37,12 @@ public class _2226_Leetcode_Maximum_Candies_Allocated_to_K_Children {
     }
 
     public static boolean check(long k, int[] candies, int n){
-        int count = 0;
-        for(int i : candies) count += i/n;
-
-        return count >= k;
+        if (n == 0) return false; // Tránh chia cho 0
+        long count = 0;
+        for (int c : candies) {
+            count += c / n;
+            if (count >= k) return true; // Không cần kiểm tra hết nếu đủ
+        }
+        return false;
     }
 }
