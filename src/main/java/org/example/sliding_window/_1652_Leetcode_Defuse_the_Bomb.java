@@ -1,4 +1,4 @@
-package org.example.Sliding_Window;
+package org.example.sliding_window;
 
 /**
  * _1652_Leetcode_Defuse_the_Bomb

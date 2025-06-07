@@ -1,4 +1,4 @@
-package org.example.Sliding_Window;
+package org.example.sliding_window;
 
 /**
  * _334_Leetcode_Increasing_Triplet_Subsequence

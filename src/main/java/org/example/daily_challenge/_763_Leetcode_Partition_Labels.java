@@ -1,5 +1,9 @@
 package org.example.daily_challenge;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 /**
  * _763_Leetcode_Partition_Labels
  * <p>

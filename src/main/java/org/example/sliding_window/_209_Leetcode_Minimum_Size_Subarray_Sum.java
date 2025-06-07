@@ -1,4 +1,4 @@
-package org.example.Sliding_Window;
+package org.example.sliding_window;
 
 /**
  * _209_Leetcode_Minimum_Size_Subarray_Sum

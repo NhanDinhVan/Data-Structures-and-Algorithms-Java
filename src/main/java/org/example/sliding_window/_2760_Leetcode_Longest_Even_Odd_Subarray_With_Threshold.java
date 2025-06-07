@@ -1,4 +1,4 @@
-package org.example.Sliding_Window;
+package org.example.sliding_window;
 
 /**
  * _2760_Leetcode_Longest_Even_Odd_Subarray_With_Threshold

@@ -1,4 +1,4 @@
-package org.example.Sliding_Window;
+package org.example.sliding_window;
 
 /**
  * _1876_Leetcode_Substrings_of_Size_Three_with_Distinct_Characters

@@ -1,4 +1,4 @@
-package org.example.Sliding_Window;
+package org.example.sliding_window;
 
 /**
  * _2269_Leetcode_Find_the_K_Beauty_of_a_Number

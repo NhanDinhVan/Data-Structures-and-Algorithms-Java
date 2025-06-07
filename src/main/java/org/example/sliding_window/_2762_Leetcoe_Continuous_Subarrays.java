@@ -1,10 +1,7 @@
-package org.example.Sliding_Window;
-
-import javafx.util.Pair;
+package org.example.sliding_window;
 
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.Set;
 
 public class _2762_Leetcoe_Continuous_Subarrays {
     public long continuousSubarrays(int[] nums) {

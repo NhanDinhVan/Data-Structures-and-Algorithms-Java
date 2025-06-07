@@ -1,5 +1,7 @@
 package org.example.daily_challenge;
 
+import java.util.Arrays;
+
 /**
  * _3375_Leetcode_Minimum_Operations_to_Make_Array_Values_Equal_to_K
  * <p>
